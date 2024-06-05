@@ -1,0 +1,136 @@
+:root{
+    --Very_Dark_Blue: hsl(234, 12%, 34%);
+    --Grayish_Blue: hsl(229, 6%, 66%);
+    --Very_Light_Gray: hsl(0, 0%, 98%);
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--Grayish_Blue);
+    background-color: white;
+}
+.poppins-extralight {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+.poppins-semibold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+.card2_3{
+    display: none;
+}
+.container{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+}
+.content{
+    margin-top: 1rem;
+}
+.content>*{
+    padding: 0.3rem;
+}
+.cards{
+    display: grid;
+    grid-template-areas: 'card1'
+    'card2'
+    'card3'
+    'card4';
+    grid-template-columns: 1fr;
+    margin-top: 2rem;
+}
+.card{
+    padding: .5rem;
+    position: relative;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+.card h3{
+    color:var(--Very_Dark_Blue)
+}
+.content h2{
+    color: var(--Very_Dark_Blue);
+}
+.card>*{
+    margin: 0 1rem;
+    padding: 0.5rem;
+}
+.card1{
+    grid-area: 'card1';
+    border-top: 3px solid var(--Blue);
+}
+.card2,.card2flex{
+    border-top: 3px solid var(--Cyan);
+    grid-area: 'card2';
+}
+.card3,.card3flex{
+    border-top: 3px solid var(--Orange);
+    grid-area: 'card3';
+}
+.card4{
+    border-top: 3px solid var(--Very_Dark_Blue);
+    grid-area: 'card4';
+}
+.imgflex{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+.imgflex img{
+    width: 70px;
+    height: 70px;
+    margin-right: 1rem;;
+}
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (min-width: 375px) {
+        .cards{
+            grid-template-areas: 'card1'
+                    'card2'
+                    'card3'
+                    'card4';
+                grid-template-columns: 1fr;
+        }
+}
+@media only screen and (min-width: 1440px) {
+    .cards{             
+        grid-template-columns: repeat(3,1fr);
+        justify-content: center;
+        align-items: center;
+    }
+    .card2_3{
+        display: flex;
+        flex-direction:column;
+    }
+    .card2,.card3{
+        display: none;
+    }
+
+}
